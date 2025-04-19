@@ -32,11 +32,13 @@
 
 ## Запуск приложения
 
+❗9999 - дефолтный порт (при необходимости поменять в `src/resources/application.properties`)
+
 ```bash
 ./gradlew bootRun
 ```
 
-Документация к API доступна по адресу: `http://localhost:8080/swagger-ui.html`
+Документация к API доступна по адресу: `http://localhost:9999/swagger-ui.html`
 
 ## DDD концепции
 
