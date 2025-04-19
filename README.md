@@ -3,48 +3,30 @@
 ## Функциональные возможности
 
 1. **Управление животными**
-   - Добавление/удаление животных
-   - Изменение информации о животных
-   - Лечение животных
-
 2. **Управление вольерами**
-   - Добавление/удаление вольеров
-   - Просмотр информации о вольерах
-   - Очистка вольеров
-
 3. **Перемещение животных между вольерами**
-   - С проверкой совместимости типа животного и вольера
-
 4. **Управление расписанием кормления**
-   - Создание расписания кормления животных
-   - Отметка о выполнении кормления
-   - Просмотр расписания кормлений
-
 5. **Статистика зоопарка**
-   - Общее количество животных
-   - Количество здоровых/больных животных
-   - Информация о заполненности вольеров
-   - Статистика по кормлениям
 
 ## Архитектура
 
-1. **Domain Layer (Ядро)**
+1. **Domain Layer**
    - Модели: Animal, Enclosure, FeedingSchedule
    - Value Objects: AnimalType, EnclosureType, Gender, FoodType
    - События: AnimalMovedEvent, FeedingTimeEvent
 
-2. **Application Layer (Сервисы)**
+2. **Application**
    - AnimalManagementService
    - EnclosureManagementService
    - AnimalTransferService
    - FeedingOrganizationService
    - ZooStatisticsService
 
-3. **Infrastructure Layer (Инфраструктура)**
+3. **Infrastructure**
    - In-memory хранилища данных
    - Конфигурация Spring
 
-4. **Presentation Layer (API)**
+4. **Presentation**
    - Контроллеры для обработки HTTP запросов
    - DTO для передачи данных
 
@@ -74,4 +56,4 @@
 
 ## Тесты e2e:
 - AnimalControllerIntegrationTest - тестирует полный жизненный цикл животного от создания до удаления
-- AnimalTransferAndFeedingIntegrationTest - тестирует e2e сценарий перемещения и кормления животного
+- AnimalTransferAndFeedingIntegrationTest - тестирует сценарий перемещения и кормления животного
